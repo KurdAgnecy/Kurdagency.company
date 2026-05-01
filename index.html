@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kurd Agency | Official</title>
 
-    <!-- TikTok Pixel Code Start -->
     <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -15,8 +14,6 @@
       ttq.page();
     }(window, document, 'ttq');
     </script>
-    <!-- TikTok Pixel Code End -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
@@ -30,7 +27,7 @@
         body { 
             background-color: var(--bg);
             background-image: 
-                radial-gradient(circle at 50% 10%, rgba(0, 255, 136, 0.12), transparent 40%),
+                radial-gradient(circle at 50% 10%, rgba(0, 255, 136, 0.15), transparent 40%),
                 linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
             background-size: 100% 100%, 35px 35px, 35px 35px;
@@ -46,17 +43,18 @@
         .container {
             width: 90%;
             max-width: 400px;
-            height: 90vh;
+            height: 92vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-align: center;
         }
 
+        /* لۆگۆ بە دیزاینی نوێ */
         .logo-container {
             position: relative;
-            width: 95px;
-            height: 95px;
+            width: 105px;
+            height: 105px;
             margin: 10px auto 10px;
         }
 
@@ -65,8 +63,8 @@
             top: 0; left: 0; right: 0; bottom: 0;
             background: var(--primary);
             border-radius: 50%;
-            filter: blur(15px);
-            opacity: 0.3;
+            filter: blur(20px);
+            opacity: 0.4;
             animation: pulseGlow 2.5s infinite alternate;
         }
 
@@ -75,32 +73,34 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            border: 1.5px solid var(--primary);
+            border: 2px solid var(--primary);
             object-fit: cover;
             background: #000;
             z-index: 2;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
         }
 
         @keyframes pulseGlow {
-            from { opacity: 0.2; transform: scale(0.95); }
-            to { opacity: 0.4; transform: scale(1.05); }
+            from { opacity: 0.2; transform: scale(0.9); }
+            to { opacity: 0.5; transform: scale(1.1); }
         }
 
         h1 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 900;
             margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
         .agency-tag {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: var(--primary);
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 25px;
-            opacity: 0.8;
+            font-weight: bold;
         }
 
         .links-grid {
@@ -110,10 +110,10 @@
         }
 
         .link-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 14px 18px;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -123,58 +123,61 @@
         }
 
         .link-card:active {
-            transform: scale(0.97);
+            transform: scale(0.96) translateX(-5px);
             background: rgba(0, 255, 136, 0.1);
             border-color: var(--primary);
         }
 
         .link-card i {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             margin-left: 12px;
+            width: 30px;
+            text-align: center;
         }
 
         .link-card span {
             flex: 1;
             text-align: right;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
-        /* Colors */
+        /* Platform Colors */
         .fa-whatsapp { color: #25d366; }
         .fa-viber { color: #7360f2; }
         .fa-telegram-plane { color: #24A1DE; }
         .fa-snapchat { color: #fffc00; }
 
-        /* بەشی خوارەوەی نوێ */
+        /* بەشی خوارەوە - سڵۆگان */
         .footer-box {
-            padding: 15px 10px;
-            background: rgba(255, 255, 255, 0.02);
+            padding: 18px 10px;
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
 
         .footer-brand {
-            font-size: 0.8rem;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
             color: #fff;
             margin-bottom: 4px;
         }
 
         .footer-slogan {
-            font-size: 0.65rem;
-            color: #aaa;
-            margin-bottom: 5px;
+            font-size: 0.7rem;
+            color: #ccc;
+            margin-bottom: 6px;
         }
 
         .contact-hint {
-            font-size: 0.55rem;
+            font-size: 0.6rem;
             color: var(--primary);
             text-transform: uppercase;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
     </style>
@@ -185,8 +188,7 @@
         <div class="top-section">
             <div class="logo-container">
                 <div class="logo-bg-glow"></div>
-                <!-- لێرە لینکی لۆگۆکەت دانێ -->
-                <img src="https://via.placeholder.com/150" alt="Kurd Agency" class="logo-img">
+                <img src="https://i.ibb.co/6R5q8z5/Xxs6-H750.jpg" alt="Kurd Agency" class="logo-img">
             </div>
             <h1>KURD AGENCY</h1>
             <p class="agency-tag">Digital Solutions</p>
@@ -214,7 +216,6 @@
             </div>
         </div>
 
-        <!-- ئەمە ئەو بەشەیە کە داوات کردبوو -->
         <div class="footer-box">
             <div class="footer-brand">KURD AGENCY</div>
             <p class="footer-slogan">گەورەکردنی کارەکەت لەگەڵ ئێمە ئاسانە</p>

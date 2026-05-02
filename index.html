@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kurd Agency | Connect</title>
 
+    <!-- TikTok Pixel Code -->
     <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
     var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-      ttq.load('D7QI1RJC77U6QAB800B0');
+      
+      // بەکارهێنانی ناسنامە نوێیەکە
+      ttq.load('D7QV313C77U4TTGIFRB0');
       ttq.page();
     }(window, document, 'ttq');
     </script>
@@ -36,7 +39,7 @@
         .main-container {
             width: 88%;
             max-width: 380px;
-            height: 85vh; /* کەمێک کورترم کردەوە بۆ ئەوەی ناوەڕاست بێت */
+            height: 82vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -44,13 +47,12 @@
             text-align: center;
         }
 
-        /* هێنانە خوارەوەی بەشی سەرەوە */
         .brand-header {
-            padding-top: 40px; /* زیادکردنی مەسافە لە سەرەوە */
+            padding-top: 50px; /* مەسافەی زیاتر لە سەرەوە بۆ هێنانە خوارەوەی */
         }
 
         .brand-name {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             font-weight: 900;
             letter-spacing: 2px;
             color: #fff;
@@ -80,7 +82,6 @@
             to { transform: translateY(8px); opacity: 1; }
         }
 
-        /* بەشی دوگمەکان */
         .links-area {
             width: 100%;
             display: flex;
@@ -103,18 +104,18 @@
             backdrop-filter: blur(10px);
         }
 
-        /* ئەنیمەیشنی جوڵانی لۆگۆکان (ئایکۆنەکان) */
+        /* لۆگۆکان (ئایکۆنەکان) بەردەوام دەجوڵێن */
         .btn-card i {
             font-size: 1.7rem;
             margin-left: 15px;
             width: 35px;
             text-align: center;
-            animation: iconMove 2.5s infinite ease-in-out;
+            animation: iconFloat 2s infinite ease-in-out;
         }
 
-        @keyframes iconMove {
+        @keyframes iconFloat {
             0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.2) rotate(10deg); color: #00ff88; }
+            50% { transform: scale(1.15) rotate(10deg); color: #00ff88; }
         }
 
         .btn-card:active {
@@ -129,27 +130,17 @@
 
         .btn-card span { flex: 1; text-align: right; }
 
-        /* فوتەر */
         .footer-card {
             width: 100%;
             padding: 15px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .footer-title {
-            font-size: 0.9rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .footer-desc {
-            font-size: 0.75rem;
-            color: #aaa;
-        }
+        .footer-title { font-size: 0.9rem; font-weight: 800; color: #fff; }
+        .footer-desc { font-size: 0.75rem; color: #aaa; margin-top: 4px; }
 
     </style>
 </head>

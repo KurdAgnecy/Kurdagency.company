@@ -22,8 +22,7 @@
         
         body { 
             background: #000;
-            background-image: 
-                radial-gradient(circle at 50% 20%, #0d2b1d 0%, #000 100%);
+            background-image: radial-gradient(circle at 50% 20%, #0d2b1d 0%, #000 100%);
             font-family: 'Segoe UI', system-ui, sans-serif;
             display: flex; 
             justify-content: center; 
@@ -37,7 +36,7 @@
         .main-container {
             width: 88%;
             max-width: 380px;
-            height: 92vh;
+            height: 85vh; /* کەمێک کورترم کردەوە بۆ ئەوەی ناوەڕاست بێت */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -45,37 +44,35 @@
             text-align: center;
         }
 
-        /* بەشی ناوی براند لە جیاتی لۆگۆ */
+        /* هێنانە خوارەوەی بەشی سەرەوە */
         .brand-header {
-            padding: 20px 0;
+            padding-top: 40px; /* زیادکردنی مەسافە لە سەرەوە */
         }
 
         .brand-name {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: #fff;
-            text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
             border: 2px solid rgba(0, 255, 136, 0.3);
-            padding: 10px 25px;
+            padding: 8px 25px;
             border-radius: 50px;
             background: rgba(0, 255, 136, 0.05);
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .instruction-text {
             font-size: 1rem;
             color: #00ff88;
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
         .arrow-down {
             font-size: 1.2rem;
-            margin: 10px 0;
-            animation: bounce 1.2s infinite alternate;
-            opacity: 0.7;
+            margin: 15px 0;
+            animation: bounce 1s infinite alternate;
         }
 
         @keyframes bounce {
@@ -83,7 +80,7 @@
             to { transform: translateY(8px); opacity: 1; }
         }
 
-        /* ستایلی نوێی دوگمەکان */
+        /* بەشی دوگمەکان */
         .links-area {
             width: 100%;
             display: flex;
@@ -94,7 +91,7 @@
         .btn-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 15px 20px;
+            padding: 16px 20px;
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -106,20 +103,25 @@
             backdrop-filter: blur(10px);
         }
 
-        .btn-card:active {
-            transform: scale(0.96);
-            background: rgba(0, 255, 136, 0.1);
-            border-color: #00ff88;
-        }
-
+        /* ئەنیمەیشنی جوڵانی لۆگۆکان (ئایکۆنەکان) */
         .btn-card i {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             margin-left: 15px;
             width: 35px;
             text-align: center;
+            animation: iconMove 2.5s infinite ease-in-out;
         }
 
-        /* ڕەنگی ئایکۆنەکان */
+        @keyframes iconMove {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(10deg); color: #00ff88; }
+        }
+
+        .btn-card:active {
+            transform: scale(0.96);
+            background: rgba(0, 255, 136, 0.15);
+        }
+
         .fa-whatsapp { color: #25d366; }
         .fa-viber { color: #7360f2; }
         .fa-telegram-plane { color: #24A1DE; }
@@ -127,27 +129,26 @@
 
         .btn-card span { flex: 1; text-align: right; }
 
-        /* فوتەر بە دیزاینی جوان */
+        /* فوتەر */
         .footer-card {
             width: 100%;
             padding: 15px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
         }
 
         .footer-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .footer-desc {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #aaa;
-            line-height: 1.4;
         }
 
     </style>

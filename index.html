@@ -7,7 +7,7 @@
 
     <script>
     !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeCookie","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
     var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
       ttq.load('D7QI1RJC77U6QAB800B0');
@@ -22,8 +22,9 @@
         
         body { 
             background: #000;
-            background-image: radial-gradient(circle at 50% 10%, #0d1a13 0%, #000000 100%);
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: 
+                radial-gradient(circle at 50% 20%, #0d2b1d 0%, #000 100%);
+            font-family: 'Segoe UI', system-ui, sans-serif;
             display: flex; 
             justify-content: center; 
             align-items: center; 
@@ -34,166 +35,157 @@
         }
 
         .main-container {
-            width: 92%;
-            max-width: 430px;
-            height: 96vh;
+            width: 88%;
+            max-width: 380px;
+            height: 92vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             text-align: center;
-            padding: 10px 0;
         }
 
-        /* بەشی لۆگۆ - برراوەتە سەرتر */
-        .header { margin-top: -10px; }
-
-        .logo-box {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #00ff88;
-            padding: 3px;
-            background: #000;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
-            margin: 0 auto 10px;
+        /* بەشی ناوی براند لە جیاتی لۆگۆ */
+        .brand-header {
+            padding: 20px 0;
         }
 
-        .logo-box img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            padding: 10px 25px;
+            border-radius: 50px;
+            background: rgba(0, 255, 136, 0.05);
+            display: inline-block;
+            margin-bottom: 10px;
         }
-
-        h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; color: #fff; }
 
         .instruction-text {
-            font-size: 1.4rem;
+            font-size: 1rem;
             color: #00ff88;
-            font-weight: 800;
-            margin-top: 5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        /* ئەنیمەیشنی سەهم */
-        .arrow-animation {
-            font-size: 2rem;
-            color: #fff;
-            animation: bounceArrow 0.8s infinite alternate;
-            margin-bottom: 5px;
+        .arrow-down {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            animation: bounce 1.2s infinite alternate;
+            opacity: 0.7;
         }
 
-        @keyframes bounceArrow {
-            from { transform: translateY(0); opacity: 0.4; }
-            to { transform: translateY(10px); opacity: 1; }
+        @keyframes bounce {
+            from { transform: translateY(0); opacity: 0.3; }
+            to { transform: translateY(8px); opacity: 1; }
         }
 
-        /* دوگمەکان - گەورەتر کراون */
+        /* ستایلی نوێی دوگمەکان */
         .links-area {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .big-btn {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 22px;
-            border-radius: 25px;
+        .btn-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             text-decoration: none;
             color: #fff;
-            font-size: 1.6rem;
-            font-weight: 900;
+            font-size: 1.1rem;
+            font-weight: 700;
             transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
 
-        /* ئەنیمەیشنی جوڵانی ئایکۆنەکان */
-        .big-btn i { 
-            font-size: 2.5rem; 
-            margin-left: 18px; 
-            width: 50px; 
-            text-align: center;
-            animation: iconShake 2.5s infinite ease-in-out;
-        }
-
-        @keyframes iconShake {
-            0%, 90%, 100% { transform: rotate(0); }
-            92% { transform: rotate(10deg); }
-            95% { transform: rotate(-10deg); }
-            97% { transform: rotate(10deg); }
-        }
-
-        .big-btn span { flex: 1; text-align: right; }
-
-        .whatsapp-icon { color: #25d366; }
-        .viber-icon { color: #7360f2; }
-        .telegram-icon { color: #24A1DE; }
-        .snapchat-icon { color: #fffc00; }
-
-        .big-btn:active {
-            transform: scale(0.95);
-            background: rgba(0, 255, 136, 0.2);
+        .btn-card:active {
+            transform: scale(0.96);
+            background: rgba(0, 255, 136, 0.1);
             border-color: #00ff88;
         }
 
-        /* فوتەر - دیزاینی جوان و باگراوند */
-        .footer-section {
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(255, 255, 255, 0.05));
-            border-radius: 30px;
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .btn-card i {
+            font-size: 1.6rem;
+            margin-left: 15px;
+            width: 35px;
+            text-align: center;
         }
 
-        .footer-brand { font-size: 1.5rem; font-weight: 900; color: #fff; letter-spacing: 2px; }
-        .footer-slogan { font-size: 1.1rem; color: #eee; margin-top: 8px; font-weight: 600; }
+        /* ڕەنگی ئایکۆنەکان */
+        .fa-whatsapp { color: #25d366; }
+        .fa-viber { color: #7360f2; }
+        .fa-telegram-plane { color: #24A1DE; }
+        .fa-snapchat { color: #fffc00; }
+
+        .btn-card span { flex: 1; text-align: right; }
+
+        /* فوتەر بە دیزاینی جوان */
+        .footer-card {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .footer-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .footer-desc {
+            font-size: 0.8rem;
+            color: #aaa;
+            line-height: 1.4;
+        }
 
     </style>
 </head>
 <body>
 
     <div class="main-container">
-        <div class="header">
-            <div class="logo-box">
-                <!-- لۆگۆکە کرا بە کۆدی ناوەکی (Base64) بۆ ئەوەی بێ ئینتەرنێت ئیش بکات -->
-                <img src="https://i.ibb.co/6R5q8z5/Xxs6-H750.jpg" alt="Kurd Agency">
-            </div>
-            <h1>KURD AGENCY</h1>
+        <div class="brand-header">
+            <div class="brand-name">KURD AGENCY</div>
             <p class="instruction-text">ڕێگایەکی پەیوەندی کردن هەڵبژێرە</p>
-            <div class="arrow-animation"><i class="fas fa-chevron-down"></i></div>
+            <div class="arrow-down"><i class="fas fa-chevron-down"></i></div>
         </div>
 
         <div class="links-area">
-            <a href="https://wa.me/9647510386174" class="big-btn" onclick="ttq.track('Contact');">
-                <i class="fab fa-whatsapp whatsapp-icon"></i>
+            <a href="https://wa.me/9647510386174" class="btn-card" onclick="ttq.track('Contact');">
+                <i class="fab fa-whatsapp"></i>
                 <span>وەتسئەپ</span>
             </a>
 
-            <a href="viber://chat?number=+9647510386174" class="big-btn" onclick="ttq.track('Contact');">
-                <i class="fab fa-viber viber-icon"></i>
+            <a href="viber://chat?number=+9647510386174" class="btn-card" onclick="ttq.track('Contact');">
+                <i class="fab fa-viber"></i>
                 <span>ڤایبەر</span>
             </a>
 
-            <a href="https://t.me/kurdagency1" class="big-btn" onclick="ttq.track('Contact');">
-                <i class="fab fa-telegram-plane telegram-icon"></i>
+            <a href="https://t.me/kurdagency1" class="btn-card" onclick="ttq.track('Contact');">
+                <i class="fab fa-telegram-plane"></i>
                 <span>تێلگرام</span>
             </a>
 
-            <a href="https://snapchat.com/t/37ZXkwvc" class="big-btn" onclick="ttq.track('Contact');">
-                <i class="fab fa-snapchat snapchat-icon"></i>
+            <a href="https://snapchat.com/t/37ZXkwvc" class="btn-card" onclick="ttq.track('Contact');">
+                <i class="fab fa-snapchat"></i>
                 <span>سناپچات</span>
             </a>
         </div>
 
-        <div class="footer-section">
-            <div class="footer-brand">KURD AGENCY</div>
-            <p class="footer-slogan">گەورەکردنی کارەکەت لەگەڵ ئێمە ئاسانە</p>
+        <div class="footer-card">
+            <div class="footer-title">KURD AGENCY</div>
+            <p class="footer-desc">گەورەکردنی کارەکەت لەگەڵ ئێمە ئاسانە</p>
         </div>
     </div>
 
